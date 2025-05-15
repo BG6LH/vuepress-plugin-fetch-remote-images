@@ -1,0 +1,44 @@
+{
+  "name": "vuepress-plugin-fetch-remote-images",
+  "version": "0.1.0",
+  "description": "A VuePress 2 plugin that automatically fetches remote images, saves them locally, and updates source files.",
+  "main": "index.mjs",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "vuepress",
+    "vuepress-plugin",
+    "vuepress2",
+    "images",
+    "remote-images",
+    "fetch",
+    "markdown",
+    "assets"
+  ],
+  "author": "jamflying <jamflying@gmail.com>", // 修改为您的信息
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bg6lh/vuepress-plugin-fetch-remote-images.git" // 修改为您的 GitHub 仓库 URL
+  },
+  "bugs": {
+    "url": "https://github.com/bg6lh/vuepress-plugin-fetch-remote-images/issues" // 修改为您的 GitHub 仓库 Issues URL
+  },
+  "homepage": "https://github.com/bg6lh/vuepress-plugin-fetch-remote-images#readme", // 修改为您的 GitHub 仓库 URL
+  "files": [
+    "index.mjs",
+    "README.md",
+    "README.zh_CN.md"
+  ],
+  "peerDependencies": {
+    "vuepress": "^2.0.0-rc.0", // 或您插件兼容的 VuePress 版本范围
+    "sharp": "^0.33.0",       // 确保版本与您测试时一致或更新
+    "fs-extra": "^11.0.0",    // 确保版本与您测试时一致或更新
+    "gray-matter": "^4.0.0"   // 确保版本与您测试时一致或更新
+  },
+  "engines": {
+    "node": ">=18.0.0" // 您的插件使用了 fetch，Node.js 18+ 内置支持
+  }
+}
