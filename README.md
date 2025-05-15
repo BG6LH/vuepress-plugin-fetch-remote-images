@@ -1,5 +1,7 @@
 # VuePress Plugin: Fetch Remote Images
 
+(中文说明)[README.zh_CN.md]
+
 A VuePress 2 plugin that automatically fetches remote images referenced in your content and frontmatter, saves them locally, and updates the source files to use these local copies. This helps improve site performance, reduce external dependencies, and ensures images are always available.
 
 ## Features
