@@ -30,11 +30,10 @@ Then, place the plugin file (e.g., index.mjs from this directory) into your VueP
 
 Add the plugin to your VuePress configuration file ( .vuepress/config.ts or .vuepress/config.js ):
 
-```
+```js
 // .vuepress/config.ts
 import { defineUserConfig } from 'vuepress';
-import fetchRemoteImagesPlugin from './plugins/fetch-remote-images/index.mjs'; // 
-Adjust path if needed
+import fetchRemoteImagesPlugin from './plugins/fetch-remote-images/index.mjs'; // Adjust path if needed
 
 export default defineUserConfig({
   // ... other configurations
@@ -42,8 +41,7 @@ export default defineUserConfig({
     fetchRemoteImagesPlugin({
       // Optional: configure plugin options here
       // See "Configuration Options" section below
-      imageSubDirName: 'remote-assets/images', // Example: store images in public/
-      remote-assets/images
+      imageSubDirName: 'remote-assets/images', // Example: store images in public/remote-assets/images
       convertToWebP: true,
       webPQuality: 75,
       // userFileExtensions: ['.md', '.vue'], // Example: process .md and .vue files
@@ -87,7 +85,7 @@ export default defineUserConfig({
 
 ## Important Notes
 
-- Modifies Source Files: This plugin directly modifies your original source files (e.g., .md files) to update image paths. Ensure you have a version control system (like Git) in place.
+- Modifies Source Files: **This plugin directly modifies your original source files (e.g., .md files) to update image paths**. Ensure you have a version control system (like Git) in place.
 - Development Server ( docs:dev ):
   - On the first run of npm run docs:dev after clearing caches or adding new remote images, you might initially see remote image links in your browser.
   - The plugin processes images asynchronously during the onPrepared hook. Once processing is complete and source files are updated, VuePress's Hot Module Replacement (HMR) should refresh the content with local image paths.

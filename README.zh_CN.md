@@ -30,11 +30,10 @@ yarn add --dev sharp fs-extra gray-matter
 
 将插件添加到您的 VuePress 配置文件（ .vuepress/config.ts 或 .vuepress/config.js ）中：
 
-```
+```js
 // .vuepress/config.ts
 import { defineUserConfig } from 'vuepress';
-import fetchRemoteImagesPlugin from './plugins/fetch-remote-images/index.mjs'; // 如果
-需要，请调整路径
+import fetchRemoteImagesPlugin from './plugins/fetch-remote-images/index.mjs'; // 如果需要，请调整路径
 
 export default defineUserConfig({
   // ... 其他配置
@@ -42,8 +41,7 @@ export default defineUserConfig({
     fetchRemoteImagesPlugin({
       // 可选：在此处配置插件选项
       // 请参阅下面的“配置选项”部分
-      imageSubDirName: 'remote-assets/images', // 示例：图片存储在 public/remote-assets/
-      images
+      imageSubDirName: 'remote-assets/images', // 示例：图片存储在 public/remote-assets/images
       convertToWebP: true,                    // 转换为 WebP
       webPQuality: 75,                        // WebP 质量
       // userFileExtensions: ['.md', '.vue'], // 示例：处理 .md 和 .vue 文件
@@ -86,7 +84,7 @@ export default defineUserConfig({
 
 ## 重要提示
 
-- 修改源文件： 此插件会直接修改您的原始源文件（例如 .md 文件）以更新图片路径。 请确保您已使用版本控制系统（如 Git）。
+- 修改源文件： **此插件会直接修改您的原始源文件（例如 .md 文件）以更新图片路径**。 请确保您已使用版本控制系统（如 Git）。
 - 开发服务器 ( docs:dev ):
   - 在清除缓存或添加新的远程图片后首次运行 npm run docs:dev 时，您最初可能会在浏览器中看到远程图片链接。
   - 插件会在 onPrepared 钩子期间异步处理图片。一旦处理完成并且源文件被更新，VuePress 的热模块替换（HMR）应该会刷新内容，显示本地图片路径。
