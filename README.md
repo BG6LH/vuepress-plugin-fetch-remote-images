@@ -95,6 +95,14 @@ export default defineUserConfig({
 - Build Process ( docs:build ): The build process will wait for the onPrepared hook to complete, ensuring all images are local and paths are updated in the final static output.
 - Dependencies: sharp is a powerful image processing library but can sometimes have complex installation requirements depending on your OS and Node.js version. Ensure it's installed correctly in your project.
 
+
+
+## Support
+
+If you find this plugin useful, consider supporting me:
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T01D9CDW)
+
+
 ## License
 
 MIT

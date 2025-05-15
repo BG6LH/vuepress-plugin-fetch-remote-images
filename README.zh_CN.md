@@ -92,6 +92,10 @@ export default defineUserConfig({
 - 构建过程 ( docs:build ): 构建过程将等待 onPrepared 钩子完成，确保所有图片都是本地的，并且路径在最终的静态输出中已更新。
 - 依赖项： sharp 是一个强大的图像处理库，但根据您的操作系统和 Node.js 版本，有时可能存在复杂的安装要求。请确保在您的项目中已正确安装。
 
+## 感谢你的支持
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T01D9CDW)
+
 ## 许可证
 
 MIT
