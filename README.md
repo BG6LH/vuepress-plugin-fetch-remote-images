@@ -100,6 +100,7 @@ export default defineUserConfig({
 ## Support
 
 If you find this plugin useful, consider supporting me:
+
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/T6T01D9CDW)
 
 
